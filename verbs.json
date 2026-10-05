@@ -1,0 +1,762 @@
+[
+  {
+    "verb": "PARLER",
+    "category": "regular -er",
+    "conjugations": {
+      "Présent": {
+        "JE": "parle",
+        "TU": "parles",
+        "IL/ELLE/ON": "parle",
+        "NOUS": "parlons",
+        "VOUS": "parlez",
+        "ILS/ELLES": "parlent"
+      },
+      "Passé Composé": {
+        "JE": "j'ai parlé",
+        "TU": "as parlé",
+        "IL/ELLE/ON": "a parlé",
+        "NOUS": "avons parlé",
+        "VOUS": "avez parlé",
+        "ILS/ELLES": "ont parlé"
+      },
+      "Imparfait": {
+        "JE": "parlais",
+        "TU": "parlais",
+        "IL/ELLE/ON": "parlait",
+        "NOUS": "parlions",
+        "VOUS": "parliez",
+        "ILS/ELLES": "parlaient"
+      },
+      "Futur Simple": {
+        "JE": "parlerai",
+        "TU": "parleras",
+        "IL/ELLE/ON": "parlera",
+        "NOUS": "parlerons",
+        "VOUS": "parlerez",
+        "ILS/ELLES": "parleront"
+      }
+    }
+  },
+  {
+    "verb": "FINIR",
+    "category": "regular -ir",
+    "conjugations": {
+      "Présent": {
+        "JE": "finis",
+        "TU": "finis",
+        "IL/ELLE/ON": "finit",
+        "NOUS": "finissons",
+        "VOUS": "finissez",
+        "ILS/ELLES": "finissent"
+      },
+      "Passé Composé": {
+        "JE": "j'ai fini",
+        "TU": "as fini",
+        "IL/ELLE/ON": "a fini",
+        "NOUS": "avons fini",
+        "VOUS": "avez fini",
+        "ILS/ELLES": "ont fini"
+      },
+      "Imparfait": {
+        "JE": "finissais",
+        "TU": "finissais",
+        "IL/ELLE/ON": "finissait",
+        "NOUS": "finissions",
+        "VOUS": "finissiez",
+        "ILS/ELLES": "finissaient"
+      },
+      "Futur Simple": {
+        "JE": "finirai",
+        "TU": "finiras",
+        "IL/ELLE/ON": "finira",
+        "NOUS": "finirons",
+        "VOUS": "finirez",
+        "ILS/ELLES": "finiront"
+      }
+    }
+  },
+  {
+    "verb": "VENDRE",
+    "category": "regular -re",
+    "conjugations": {
+      "Présent": {
+        "JE": "vends",
+        "TU": "vends",
+        "IL/ELLE/ON": "vend",
+        "NOUS": "vendons",
+        "VOUS": "vendez",
+        "ILS/ELLES": "vendent"
+      },
+      "Passé Composé": {
+        "JE": "j'ai vendu",
+        "TU": "as vendu",
+        "IL/ELLE/ON": "a vendu",
+        "NOUS": "avons vendu",
+        "VOUS": "avez vendu",
+        "ILS/ELLES": "ont vendu"
+      },
+      "Imparfait": {
+        "JE": "vendais",
+        "TU": "vendais",
+        "IL/ELLE/ON": "vendait",
+        "NOUS": "vendions",
+        "VOUS": "vendiez",
+        "ILS/ELLES": "vendaient"
+      },
+      "Futur Simple": {
+        "JE": "vendrai",
+        "TU": "vendras",
+        "IL/ELLE/ON": "vendra",
+        "NOUS": "vendrons",
+        "VOUS": "vendrez",
+        "ILS/ELLES": "vendront"
+      }
+    }
+  },
+  {
+    "verb": "ALLER",
+    "category": "irregular",
+    "conjugations": {
+      "Présent": {
+        "JE": "vais",
+        "TU": "vas",
+        "IL/ELLE/ON": "va",
+        "NOUS": "allons",
+        "VOUS": "allez",
+        "ILS/ELLES": "vont"
+      },
+      "Passé Composé": {
+        "JE": "suis allé(e)",
+        "TU": "es allé(e)",
+        "IL/ELLE/ON": "est allé(e)",
+        "NOUS": "sommes allé(e)s",
+        "VOUS": "êtes allé(e)s",
+        "ILS/ELLES": "sont allé(e)s"
+      },
+      "Imparfait": {
+        "JE": "j'allais",
+        "TU": "allais",
+        "IL/ELLE/ON": "allait",
+        "NOUS": "allions",
+        "VOUS": "alliez",
+        "ILS/ELLES": "allaient"
+      },
+      "Futur Simple": {
+        "JE": "j'irai",
+        "TU": "iras",
+        "IL/ELLE/ON": "ira",
+        "NOUS": "irons",
+        "VOUS": "irez",
+        "ILS/ELLES": "iront"
+      }
+    }
+  },
+  {
+    "verb": "BOIRE",
+    "category": "irregular",
+    "conjugations": {
+      "Présent": {
+        "JE": "bois",
+        "TU": "bois",
+        "IL/ELLE/ON": "boit",
+        "NOUS": "buvons",
+        "VOUS": "buvez",
+        "ILS/ELLES": "boivent"
+      },
+      "Passé Composé": {
+        "JE": "j'ai bu",
+        "TU": "as bu",
+        "IL/ELLE/ON": "a bu",
+        "NOUS": "avons bu",
+        "VOUS": "avez bu",
+        "ILS/ELLES": "ont bu"
+      },
+      "Imparfait": {
+        "JE": "buvais",
+        "TU": "buvais",
+        "IL/ELLE/ON": "buvait",
+        "NOUS": "buvions",
+        "VOUS": "buviez",
+        "ILS/ELLES": "buvaient"
+      },
+      "Futur Simple": {
+        "JE": "boirai",
+        "TU": "boiras",
+        "IL/ELLE/ON": "boira",
+        "NOUS": "boirons",
+        "VOUS": "boirez",
+        "ILS/ELLES": "boiront"
+      }
+    }
+  },
+  {
+    "verb": "DIRE",
+    "category": "irregular",
+    "conjugations": {
+      "Présent": {
+        "JE": "dis",
+        "TU": "dis",
+        "IL/ELLE/ON": "dit",
+        "NOUS": "disons",
+        "VOUS": "dites",
+        "ILS/ELLES": "disent"
+      },
+      "Passé Composé": {
+        "JE": "j'ai dit",
+        "TU": "as dit",
+        "IL/ELLE/ON": "a dit",
+        "NOUS": "avons dit",
+        "VOUS": "avez dit",
+        "ILS/ELLES": "ont dit"
+      },
+      "Imparfait": {
+        "JE": "disais",
+        "TU": "disais",
+        "IL/ELLE/ON": "disait",
+        "NOUS": "disions",
+        "VOUS": "disiez",
+        "ILS/ELLES": "disaient"
+      },
+      "Futur Simple": {
+        "JE": "dirai",
+        "TU": "diras",
+        "IL/ELLE/ON": "dira",
+        "NOUS": "dirons",
+        "VOUS": "direz",
+        "ILS/ELLES": "diront"
+      }
+    }
+  },
+  {
+    "verb": "FAIRE",
+    "category": "irregular",
+    "conjugations": {
+      "Présent": {
+        "JE": "fais",
+        "TU": "fais",
+        "IL/ELLE/ON": "fait",
+        "NOUS": "faisons",
+        "VOUS": "faites",
+        "ILS/ELLES": "font"
+      },
+      "Passé Composé": {
+        "JE": "j'ai fait",
+        "TU": "as fait",
+        "IL/ELLE/ON": "a fait",
+        "NOUS": "avons fait",
+        "VOUS": "avez fait",
+        "ILS/ELLES": "ont fait"
+      },
+      "Imparfait": {
+        "JE": "faisais",
+        "TU": "faisais",
+        "IL/ELLE/ON": "faisait",
+        "NOUS": "faisions",
+        "VOUS": "faisiez",
+        "ILS/ELLES": "faisaient"
+      },
+      "Futur Simple": {
+        "JE": "ferai",
+        "TU": "feras",
+        "IL/ELLE/ON": "fera",
+        "NOUS": "ferons",
+        "VOUS": "ferez",
+        "ILS/ELLES": "feront"
+      }
+    }
+  },
+  {
+    "verb": "AVOIR",
+    "category": "irregular",
+    "conjugations": {
+      "Présent": {
+        "JE": "j'ai",
+        "TU": "as",
+        "IL/ELLE/ON": "a",
+        "NOUS": "avons",
+        "VOUS": "avez",
+        "ILS/ELLES": "ont"
+      },
+      "Passé Composé": {
+        "JE": "j'ai eu",
+        "TU": "as eu",
+        "IL/ELLE/ON": "a eu",
+        "NOUS": "avons eu",
+        "VOUS": "avez eu",
+        "ILS/ELLES": "ont eu"
+      },
+      "Imparfait": {
+        "JE": "j'avais",
+        "TU": "avais",
+        "IL/ELLE/ON": "avait",
+        "NOUS": "avions",
+        "VOUS": "aviez",
+        "ILS/ELLES": "avaient"
+      },
+      "Futur Simple": {
+        "JE": "j'aurai",
+        "TU": "auras",
+        "IL/ELLE/ON": "aura",
+        "NOUS": "aurons",
+        "VOUS": "aurez",
+        "ILS/ELLES": "auront"
+      }
+    }
+  },
+  {
+    "verb": "ÊTRE",
+    "category": "irregular",
+    "conjugations": {
+      "Présent": {
+        "JE": "suis",
+        "TU": "es",
+        "IL/ELLE/ON": "est",
+        "NOUS": "sommes",
+        "VOUS": "êtes",
+        "ILS/ELLES": "sont"
+      },
+      "Passé Composé": {
+        "JE": "j'ai été",
+        "TU": "as été",
+        "IL/ELLE/ON": "a été",
+        "NOUS": "avons été",
+        "VOUS": "avez été",
+        "ILS/ELLES": "ont été"
+      },
+      "Imparfait": {
+        "JE": "j'étais",
+        "TU": "étais",
+        "IL/ELLE/ON": "était",
+        "NOUS": "étions",
+        "VOUS": "étiez",
+        "ILS/ELLES": "étaient"
+      },
+      "Futur Simple": {
+        "JE": "serai",
+        "TU": "seras",
+        "IL/ELLE/ON": "sera",
+        "NOUS": "serons",
+        "VOUS": "serez",
+        "ILS/ELLES": "seront"
+      }
+    }
+  },
+  {
+    "verb": "OUVRIR",
+    "category": "irregular",
+    "conjugations": {
+      "Présent": {
+        "JE": "j'ouvre",
+        "TU": "ouvres",
+        "IL/ELLE/ON": "ouvre",
+        "NOUS": "ouvrons",
+        "VOUS": "ouvrez",
+        "ILS/ELLES": "ouvrent"
+      },
+      "Passé Composé": {
+        "JE": "j'ai ouvert",
+        "TU": "as ouvert",
+        "IL/ELLE/ON": "a ouvert",
+        "NOUS": "avons ouvert",
+        "VOUS": "avez ouvert",
+        "ILS/ELLES": "ont ouvert"
+      },
+      "Imparfait": {
+        "JE": "j'ouvrais",
+        "TU": "ouvrais",
+        "IL/ELLE/ON": "ouvrait",
+        "NOUS": "ouvrions",
+        "VOUS": "ouvriez",
+        "ILS/ELLES": "ouvraient"
+      },
+      "Futur Simple": {
+        "JE": "j'ouvrirai",
+        "TU": "ouvriras",
+        "IL/ELLE/ON": "ouvrira",
+        "NOUS": "ouvrirons",
+        "VOUS": "ouvrirez",
+        "ILS/ELLES": "ouvriront"
+      }
+    }
+  },
+  {
+    "verb": "VOYAGER",
+    "category": "regular -er",
+    "conjugations": {
+      "Présent": {
+        "JE": "voyage",
+        "TU": "voyages",
+        "IL/ELLE/ON": "voyage",
+        "NOUS": "voyagons",
+        "VOUS": "voyagez",
+        "ILS/ELLES": "voyagent"
+      },
+      "Passé Composé": {
+        "JE": "j'ai voyagé",
+        "TU": "voyagé",
+        "IL/ELLE/ON": "a voyagé",
+        "NOUS": "avons voyagé",
+        "VOUS": "avez voyagé",
+        "ILS/ELLES": "ont voyagé"
+      },
+      "Imparfait": {
+        "JE": "voyageais",
+        "TU": "voyageais",
+        "IL/ELLE/ON": "voyageait",
+        "NOUS": "voyagions",
+        "VOUS": "voyagiez",
+        "ILS/ELLES": "voyageaient"
+      },
+      "Futur Simple": {
+        "JE": "voyagerai",
+        "TU": "voyageras",
+        "IL/ELLE/ON": "voyagera",
+        "NOUS": "voyagerons",
+        "VOUS": "voyagerez",
+        "ILS/ELLES": "voyageront"
+      }
+    }
+  },
+  {
+    "verb": "PARTIR",
+    "category": "irregular",
+    "conjugations": {
+      "Présent": {
+        "JE": "pars",
+        "TU": "pars",
+        "IL/ELLE/ON": "part",
+        "NOUS": "partons",
+        "VOUS": "partez",
+        "ILS/ELLES": "partent"
+      },
+      "Passé Composé": {
+        "JE": "suis parti(e)",
+        "TU": "es parti(e)",
+        "IL/ELLE/ON": "est parti(e)",
+        "NOUS": "sommes parti(e)s",
+        "VOUS": "êtes parti(e)s",
+        "ILS/ELLES": "sont parti(e)s"
+      },
+      "Imparfait": {
+        "JE": "partais",
+        "TU": "partais",
+        "IL/ELLE/ON": "partait",
+        "NOUS": "partions",
+        "VOUS": "partiez",
+        "ILS/ELLES": "partaient"
+      },
+      "Futur Simple": {
+        "JE": "partirai",
+        "TU": "partiras",
+        "IL/ELLE/ON": "partira",
+        "NOUS": "partirons",
+        "VOUS": "partirez",
+        "ILS/ELLES": "partiront"
+      }
+    }
+  },
+  {
+    "verb": "VOULOIR",
+    "category": "irregular",
+    "conjugations": {
+      "Présent": {
+        "JE": "veux",
+        "TU": "veux",
+        "IL/ELLE/ON": "veut",
+        "NOUS": "voulons",
+        "VOUS": "voulez",
+        "ILS/ELLES": "veulent"
+      },
+      "Passé Composé": {
+        "JE": "j'ai voulu",
+        "TU": "as voulu",
+        "IL/ELLE/ON": "a voulu",
+        "NOUS": "avons voulu",
+        "VOUS": "avez voulu",
+        "ILS/ELLES": "ont voulu"
+      },
+      "Imparfait": {
+        "JE": "voulais",
+        "TU": "voulais",
+        "IL/ELLE/ON": "voulait",
+        "NOUS": "voulions",
+        "VOUS": "vouliez",
+        "ILS/ELLES": "voulaient"
+      },
+      "Futur Simple": {
+        "JE": "voudrai",
+        "TU": "voudras",
+        "IL/ELLE/ON": "voudra",
+        "NOUS": "voudrons",
+        "VOUS": "voudrez",
+        "ILS/ELLES": "voudront"
+      }
+    }
+  },
+  {
+    "verb": "SE LAVER",
+    "category": "irregular",
+    "conjugations": {
+      "Présent": {
+        "JE": "me lave",
+        "TU": "te laves",
+        "IL/ELLE/ON": "se lave",
+        "NOUS": "nous lavons",
+        "VOUS": "vous lavez",
+        "ILS/ELLES": "se lavent"
+      },
+      "Passé Composé": {
+        "JE": "me suis lavé(e)",
+        "TU": "t'es lavé(e)",
+        "IL/ELLE/ON": "s'est lavé(e)",
+        "NOUS": "nous sommes lavé(e)s",
+        "VOUS": "vous êtes lavé(e)s",
+        "ILS/ELLES": "se sont lavé(e)s"
+      },
+      "Imparfait": {
+        "JE": "me lavais",
+        "TU": "te lavais",
+        "IL/ELLE/ON": "se lavait",
+        "NOUS": "nous lavions",
+        "VOUS": "vous laviez",
+        "ILS/ELLES": "se lavaient"
+      },
+      "Futur Simple": {
+        "JE": "me laverai",
+        "TU": "te laveras",
+        "IL/ELLE/ON": "se laveras",
+        "NOUS": "nous laverons",
+        "VOUS": "vous laverez",
+        "ILS/ELLES": "se laveront"
+      }
+    }
+  },
+  {
+    "verb": "MANGER",
+    "category": "regular -er",
+    "conjugations": {
+      "Présent": {
+        "JE": "mange",
+        "TU": "manges",
+        "IL/ELLE/ON": "mange",
+        "NOUS": "mangeons",
+        "VOUS": "mangez",
+        "ILS/ELLES": "mangent"
+      },
+      "Passé Composé": {
+        "JE": "j'ai mangé",
+        "TU": "as mangé",
+        "IL/ELLE/ON": "a mangé",
+        "NOUS": "avons mangé",
+        "VOUS": "avez mangé",
+        "ILS/ELLES": "ont mangé"
+      },
+      "Imparfait": {
+        "JE": "mangeais",
+        "TU": "mangeais",
+        "IL/ELLE/ON": "mangeait",
+        "NOUS": "mangions",
+        "VOUS": "mangiez",
+        "ILS/ELLES": "mangeaient"
+      },
+      "Futur Simple": {
+        "JE": "mangerai",
+        "TU": "mangeras",
+        "IL/ELLE/ON": "mangera",
+        "NOUS": "mangerons",
+        "VOUS": "mangerez",
+        "ILS/ELLES": "mangeront"
+      }
+    }
+  },
+  {
+    "verb": "POUVOIR",
+    "category": "irregular",
+    "conjugations": {
+      "Présent": {
+        "JE": "peux",
+        "TU": "peux",
+        "IL/ELLE/ON": "peut",
+        "NOUS": "pouvons",
+        "VOUS": "pouvez",
+        "ILS/ELLES": "peuvent"
+      },
+      "Passé Composé": {
+        "JE": "j'ai pu",
+        "TU": "as pu",
+        "IL/ELLE/ON": "a pu",
+        "NOUS": "avons pu",
+        "VOUS": "avez pu",
+        "ILS/ELLES": "ont pu"
+      },
+      "Imparfait": {
+        "JE": "pouvais",
+        "TU": "pouvais",
+        "IL/ELLE/ON": "pouvait",
+        "NOUS": "pouvions",
+        "VOUS": "pouviez",
+        "ILS/ELLES": "pouvaient"
+      },
+      "Futur Simple": {
+        "JE": "pourrai",
+        "TU": "pourras",
+        "IL/ELLE/ON": "pourra",
+        "NOUS": "pourrons",
+        "VOUS": "pourrez",
+        "ILS/ELLES": "pourront"
+      }
+    }
+  },
+  {
+    "verb": "DESCENDRE",
+    "category": "regular -re",
+    "conjugations": {
+      "Présent": {
+        "JE": "descends",
+        "TU": "descends",
+        "IL/ELLE/ON": "descend",
+        "NOUS": "descendons",
+        "VOUS": "descendez",
+        "ILS/ELLES": "descendent"
+      },
+      "Passé Composé": {
+        "JE": "suis descendu(e)",
+        "TU": "es descendu(e)",
+        "IL/ELLE/ON": "est descendu(e)",
+        "NOUS": "sommes descendu(e)s",
+        "VOUS": "êtes descendu(e)s",
+        "ILS/ELLES": "sont descendu(e)s"
+      },
+      "Imparfait": {
+        "JE": "partais",
+        "TU": "partais",
+        "IL/ELLE/ON": "partait",
+        "NOUS": "partions",
+        "VOUS": "partiez",
+        "ILS/ELLES": "partaient"
+      },
+      "Futur Simple": {
+        "JE": "descendrai",
+        "TU": "descendras",
+        "IL/ELLE/ON": "descendra",
+        "NOUS": "descendrons",
+        "VOUS": "descendrez",
+        "ILS/ELLES": "descendront"
+      }
+    }
+  },
+  {
+    "verb": "MONTER",
+    "category": "regular -er",
+    "conjugations": {
+      "Présent": {
+        "JE": "monte",
+        "TU": "montes",
+        "IL/ELLE/ON": "monte",
+        "NOUS": "montons",
+        "VOUS": "montez",
+        "ILS/ELLES": "montent"
+      },
+      "Passé Composé": {
+        "JE": "suis monté(e)",
+        "TU": "es monté(e)",
+        "IL/ELLE/ON": "est monté(e)",
+        "NOUS": "sommes monté(e)s",
+        "VOUS": "êtes monté(e)s",
+        "ILS/ELLES": "sont monté(e)s"
+      },
+      "Imparfait": {
+        "JE": "montais",
+        "TU": "montais",
+        "IL/ELLE/ON": "montait",
+        "NOUS": "montions",
+        "VOUS": "montiez",
+        "ILS/ELLES": "montaient"
+      },
+      "Futur Simple": {
+        "JE": "monterai",
+        "TU": "monteras",
+        "IL/ELLE/ON": "montera",
+        "NOUS": "monterons",
+        "VOUS": "monterez",
+        "ILS/ELLES": "monteront"
+      }
+    }
+  },
+  {
+    "verb": "DEVOIR",
+    "category": "irregular",
+    "conjugations": {
+      "Présent": {
+        "JE": "dois",
+        "TU": "dois",
+        "IL/ELLE/ON": "doit",
+        "NOUS": "devons",
+        "VOUS": "devez",
+        "ILS/ELLES": "doivent"
+      },
+      "Passé Composé": {
+        "JE": "j'ai dû",
+        "TU": "as dû",
+        "IL/ELLE/ON": "a dû",
+        "NOUS": "avons dû",
+        "VOUS": "avez dû",
+        "ILS/ELLES": "ont dû"
+      },
+      "Imparfait": {
+        "JE": "devais",
+        "TU": "devais",
+        "IL/ELLE/ON": "devait",
+        "NOUS": "devions",
+        "VOUS": "deviez",
+        "ILS/ELLES": "devaient"
+      },
+      "Futur Simple": {
+        "JE": "devrai",
+        "TU": "devras",
+        "IL/ELLE/ON": "devra",
+        "NOUS": "devrons",
+        "VOUS": "devrez",
+        "ILS/ELLES": "devront"
+      }
+    }
+  },
+  {
+    "verb": "ÉCRIRE",
+    "category": "irregular",
+    "conjugations": {
+      "Présent": {
+        "JE": "j'écris",
+        "TU": "écris",
+        "IL/ELLE/ON": "écrit",
+        "NOUS": "écrivons",
+        "VOUS": "écrivez",
+        "ILS/ELLES": "écrivent"
+      },
+      "Passé Composé": {
+        "JE": "j'ai écrit",
+        "TU": "as écrit",
+        "IL/ELLE/ON": "a écrit",
+        "NOUS": "avons écrit",
+        "VOUS": "avez écrit",
+        "ILS/ELLES": "ont écrit"
+      },
+      "Imparfait": {
+        "JE": "j'écrivais",
+        "TU": "écrivais",
+        "IL/ELLE/ON": "écrivait",
+        "NOUS": "écrivions",
+        "VOUS": "écriviez",
+        "ILS/ELLES": "écrivaient"
+      },
+      "Futur Simple": {
+        "JE": "j'écrirai",
+        "TU": "écriras",
+        "IL/ELLE/ON": "écriras",
+        "NOUS": "écrirons",
+        "VOUS": "écrirez",
+        "ILS/ELLES": "écriront"
+      }
+    }
+  }
+]
