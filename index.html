@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entraînement de Conjugaison Française</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .card-quiz { max-width: 650px; margin: 30px auto; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); min-height: 420px; }
+        .feedback { font-size: 1.2rem; font-weight: bold; min-height: 35px; }
+        .correct { color: #198754; }
+        .incorrect { color: #dc3545; }
+        .accent-btn { margin: 2px; padding: 4px 10px; font-weight: bold; }
+        .mc-option { width: 100%; margin-bottom: 10px; text-align: left; padding: 12px; font-size: 1.1rem; }
+        
+        /* Flashcard Flip Styles */
+        .flashcard-container { perspective: 1000px; height: 220px; cursor: pointer; }
+        .flashcard { width: 100%; height: 100%; position: relative; transform-style: preserve-3d; transition: transform 0.6s; }
+        .flashcard.flipped { transform: rotateY(180deg); }
+        .card-face { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 12px; border: 2px solid #0d6efd; background-color: #fff; }
+        .card-back { transform: rotateY(180deg); background-color: #e7f1ff; }
+    </style>
+</head>
+<body>
+
+<div class="container py-4">
+    <div class="text-center mb-4">
+        <h1 class="fw-bold">🇫🇷 Pratique de Conjugaison</h1>
+        <p class="text-muted">Réviser et maîtriser les verbes français</p>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-9">
+            
+            <!-- Mode Selection & Controls -->
+            <div class="card mb-4 p-3 shadow-sm">
+                <div class="row g-3 align-items-center">
+                    <div class="col-md-5">
+                        <label class="form-label fw-bold">Mode d'exercice :</label>
+                        <select id="modeSelect" class="form-select" onchange="switchMode()">
+                            <option value="typing">⌨️ Saisie au clavier (Typing)</option>
+                            <option value="mc">🔘 Choix multiple (Multiple Choice)</option>
+                            <option value="flashcard">🎴 Cartes mémoire (Flashcards)</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label fw-bold">Temps (Tense) :</label>
+                        <select id="tenseSelect" class="form-select" onchange="nextQuestion()">
+                            <option value="ALL">Tous les temps (All)</option>
+                            <option value="Présent">Présent</option>
+                            <option value="Passé Composé">Passé Composé</option>
+                            <option value="Imparfait">Imparfait</option>
+                            <option value="Futur Simple">Futur Simple</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 text-end">
+                        <span class="badge bg-success p-2 fs-6 d-block mb-1">Score: <span id="score">0</span></span>
+                        <span class="badge bg-secondary p-2 fs-6 d-block">Série: <span id="streak">0</span> 🔥</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MAIN QUIZ DISPLAY CARD -->
+            <div class="card card-quiz p-4 text-center d-flex flex-column justify-content-between">
+                
+                <div>
+                    <span id="verbGroup" class="badge bg-info text-dark mb-2 fs-6"></span>
+                    <h2 id="verbDisplay" class="display-5 fw-bold text-primary mb-0">---</h2>
+                    <p class="text-muted fs-5">Temps: <strong id="tenseDisplay">---</strong></p>
+                </div>
+
+                <!-- 1. TYPING UI MODE -->
+                <div id="typingArea" class="quiz-mode-area">
+                    <h3 class="display-6 my-3"><span id="pronounDisplayTyping" class="text-secondary">---</span> <span id="targetPlaceholder">_______</span></h3>
+                    
+                    <div class="mb-3">
+                        <small class="text-muted d-block mb-1">Caractères spéciaux :</small>
+                        <button class="btn btn-outline-secondary btn-sm accent-btn" onclick="addChar('é')">é</button>
+                        <button class="btn btn-outline-secondary btn-sm accent-btn" onclick="addChar('è')">è</button>
+                        <button class="btn btn-outline-secondary btn-sm accent-btn" onclick="addChar('ê')">ê</button>
+                        <button class="btn btn-outline-secondary btn-sm accent-btn" onclick="addChar('à')">à</button>
+                        <button class="btn btn-outline-secondary btn-sm accent-btn" onclick="addChar('ù')">ù</button>
+                        <button class="btn btn-outline-secondary btn-sm accent-btn" onclick="addChar('ç')">ç</button>
+                        <button class="btn btn-outline-secondary btn-sm accent-btn" onclick="addChar('î')">î</button>
+                    </div>
+
+                    <form id="quizForm" onsubmit="checkTypingAnswer(event)">
+                        <div class="input-group mb-2 input-group-lg">
+                            <input type="text" id="answerInput" class="form-control text-center" placeholder="Tapez la réponse..." autocomplete="off">
+                            <button class="btn btn-primary px-4" type="submit">Valider</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- 2. MULTIPLE CHOICE UI MODE -->
+                <div id="mcArea" class="quiz-mode-area d-none">
+                    <h3 class="display-6 my-3"><span id="pronounDisplayMC" class="text-secondary">---</span> _________</h3>
+                    <div id="mcOptionsContainer" class="row mt-3">
+                        <!-- Options dynamically injected here -->
+                    </div>
+                </div>
+
+                <!-- 3. FLASHCARD UI MODE -->
+                <div id="flashcardArea" class="quiz-mode-area d-none">
+                    <div class="flashcard-container" onclick="flipCard()">
+                        <div id="flashcard" class="flashcard">
+                            <div class="card-face card-front">
+                                <span id="fcPronoun" class="display-5 text-secondary">---</span>
+                                <small class="text-muted mt-3">(Cliquez pour voir la réponse)</small>
+                            </div>
+                            <div class="card-face card-back">
+                                <span id="fcAnswer" class="display-5 text-primary fw-bold">---</span>
+                                <small class="text-muted mt-3">(Cliquez pour retourner)</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <button class="btn btn-outline-success me-2" onclick="flashcardSelfGrade(true)">👍 Je savais</button>
+                        <button class="btn btn-outline-danger" onclick="flashcardSelfGrade(false)">👎 À revoir</button>
+                    </div>
+                </div>
+
+                <!-- Shared Feedback and Next Button -->
+                <div id="feedback" class="feedback my-2"></div>
+                <div>
+                    <button id="nextBtn" class="btn btn-primary btn-lg mt-2 d-none" onclick="nextQuestion()">Question Suivante ➔</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+let verbsData = [];
+let currentQuestion = null;
+let score = 0;
+let streak = 0;
+
+fetch('verbs.json')
+    .then(response => response.json())
+    .then(data => {
+        verbsData = data;
+        nextQuestion();
+    })
+    .catch(error => {
+        document.getElementById('verbDisplay').innerText = "Erreur de chargement";
+        console.error('Error loading verbs:', error);
+    });
+
+function getRandomElement(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+}
+
+function switchMode() {
+    const mode = document.getElementById('modeSelect').value;
+    document.getElementById('typingArea').classList.add('d-none');
+    document.getElementById('mcArea').classList.add('d-none');
+    document.getElementById('flashcardArea').classList.add('d-none');
+
+    if (mode === 'typing') document.getElementById('typingArea').classList.remove('d-none');
+    if (mode === 'mc') document.getElementById('mcArea').classList.remove('d-none');
+    if (mode === 'flashcard') document.getElementById('flashcardArea').classList.remove('d-none');
+
+    nextQuestion();
+}
+
+function nextQuestion() {
+    if (verbsData.length === 0) return;
+
+    document.getElementById('feedback').innerText = '';
+    document.getElementById('nextBtn').classList.add('d-none');
+    document.getElementById('answerInput').value = '';
+    document.getElementById('answerInput').disabled = false;
+    document.getElementById('flashcard').classList.remove('flipped');
+
+    const verbObj = getRandomElement(verbsData);
+    const selectedTense = document.getElementById('tenseSelect').value;
+
+    let tense = selectedTense;
+    if (selectedTense === 'ALL') {
+        const availableTenses = Object.keys(verbObj.conjugations);
+        tense = getRandomElement(availableTenses);
+    }
+
+    const pronouns = Object.keys(verbObj.conjugations[tense]);
+    const pronoun = getRandomElement(pronouns);
+    const answer = verbObj.conjugations[tense][pronoun];
+
+    currentQuestion = {
+        verb: verbObj.verb,
+        category: verbObj.category,
+        tense: tense,
+        pronoun: pronoun,
+        answer: answer
+    };
+
+    document.getElementById('verbDisplay').innerText = currentQuestion.verb;
+    document.getElementById('verbGroup').innerText = currentQuestion.category;
+    document.getElementById('tenseDisplay').innerText = currentQuestion.tense;
+
+    const mode = document.getElementById('modeSelect').value;
+
+    if (mode === 'typing') {
+        document.getElementById('pronounDisplayTyping').innerText = currentQuestion.pronoun;
+        document.getElementById('answerInput').focus();
+    } else if (mode === 'mc') {
+        document.getElementById('pronounDisplayMC').innerText = currentQuestion.pronoun;
+        setupMultipleChoice();
+    } else if (mode === 'flashcard') {
+        document.getElementById('fcPronoun').innerText = currentQuestion.pronoun;
+        document.getElementById('fcAnswer').innerText = `${currentQuestion.pronoun} ${currentQuestion.answer}`;
+    }
+}
+
+/* 1. TYPING LOGIC */
+function addChar(char) {
+    const input = document.getElementById('answerInput');
+    input.value += char;
+    input.focus();
+}
+
+function cleanString(str) {
+    return str.trim().toLowerCase().replace(/\s+/g, ' ');
+}
+
+function checkTypingAnswer(e) {
+    e.preventDefault();
+    const userInput = cleanString(document.getElementById('answerInput').value);
+    const correctAnswer = cleanString(currentQuestion.answer);
+
+    document.getElementById('answerInput').disabled = true;
+    evalResult(userInput === correctAnswer, currentQuestion.answer);
+}
+
+/* 2. MULTIPLE CHOICE LOGIC */
+function setupMultipleChoice() {
+    const container = document.getElementById('mcOptionsContainer');
+    container.innerHTML = '';
+
+    // Collect distractors from random verbs/pronouns
+    let options = [currentQuestion.answer];
+    while (options.length < 4) {
+        const randVerb = getRandomElement(verbsData);
+        const tenses = Object.keys(randVerb.conjugations);
+        const randTense = getRandomElement(tenses);
+        const pronouns = Object.keys(randVerb.conjugations[randTense]);
+        const randPronoun = getRandomElement(pronouns);
+        const randAnswer = randVerb.conjugations[randTense][randPronoun];
+
+        if (!options.includes(randAnswer) && randAnswer) {
+            options.push(randAnswer);
+        }
+    }
+
+    // Shuffle options
+    options.sort(() => Math.random() - 0.5);
+
+    options.forEach(opt => {
+        const col = document.createElement('div');
+        col.className = 'col-6';
+        col.innerHTML = `<button class="btn btn-outline-primary mc-option" onclick="checkMCAnswer(this, '${opt}')">${opt}</button>`;
+        container.appendChild(col);
+    });
+}
+
+function checkMCAnswer(btn, selectedOption) {
+    const isCorrect = cleanString(selectedOption) === cleanString(currentQuestion.answer);
+    
+    // Disable all options
+    document.querySelectorAll('.mc-option').forEach(b => {
+        b.disabled = true;
+        if (cleanString(b.innerText) === cleanString(currentQuestion.answer)) {
+            b.classList.replace('btn-outline-primary', 'btn-success');
+        }
+    });
+
+    if (!isCorrect) {
+        btn.classList.replace('btn-outline-primary', 'btn-danger');
+    }
+
+    evalResult(isCorrect, currentQuestion.answer);
+}
+
+/* 3. FLASHCARD LOGIC */
+function flipCard() {
+    document.getElementById('flashcard').classList.toggle('flipped');
+}
+
+function flashcardSelfGrade(knewIt) {
+    evalResult(knewIt, currentQuestion.answer);
+}
+
+/* SCORE EVALUATION */
+function evalResult(isCorrect, correctAnswer) {
+    const feedbackEl = document.getElementById('feedback');
+    if (isCorrect) {
+        score += 10;
+        streak += 1;
+        feedbackEl.className = 'feedback correct';
+        feedbackEl.innerText = '✨ Bravo ! Correct !';
+    } else {
+        streak = 0;
+        feedbackEl.className = 'feedback incorrect';
+        feedbackEl.innerHTML = `❌ La réponse était : <strong>${correctAnswer}</strong>`;
+    }
+
+    document.getElementById('score').innerText = score;
+    document.getElementById('streak').innerText = streak;
+    document.getElementById('nextBtn').classList.remove('d-none');
+}
+</script>
+
+</body>
+</html>
